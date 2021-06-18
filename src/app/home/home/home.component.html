@@ -1,0 +1,67 @@
+<div class="home-content">
+  <div class="home-feeds">
+     <div class="home-stories">
+         <app-stories></app-stories>
+     </div>
+     <div class="home-popular">
+         <h6>Feeds</h6>
+         <div class="home-tabs">
+         <ul>
+             <li>
+                 <a routerLink="all" routerLinkActive="active"> <span>All</span></a>
+             </li>
+             <li>
+                <a routerLink="follow"  routerLinkActive="active">
+                   <span>Following</span> </a>
+            </li>
+            <li>
+                <a routerLink="newest" routerLinkActive="active">
+                    <span>Newest</span> </a>
+            </li>
+            <li>
+                <a routerLink="popular" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                     
+                   <span>Popular</span> </a>
+            </li>
+         </ul>
+         </div>
+     
+     </div>
+     <div class="data">
+     
+        <router-outlet></router-outlet>
+         
+    </div>
+
+  </div>
+  <div class="home-suggestion">
+      
+    <div class="suggestion-header">
+        <div class="search">
+           
+            <input type="search" placeholder="Search">
+             <i class="fas fa-search" style="font-size: 20px;"></i>
+      </div>
+        
+        <div class="notfi">
+            <i class="fas fa-bell" style="font-size: 15px;"></i>
+        </div>
+        <div class="notfi cloud">
+            <i class="fas fa-cloud-download-alt" style="font-size: 15px;"></i>
+        </div>
+   
+    </div>
+    <div class="suggestion">
+        <div class="title">
+            <h6>Suggestions For You</h6>
+            <a href="#">See All</a>
+
+        </div>
+        <div class="suggestion-content" *ngFor="let data of dataa">
+            <app-suggestions [data] ="data"></app-suggestions>
+            <button id={{data.id}} (click)="followed(data.id)" class="followbt">Follow</button>
+        </div>
+    </div>
+    <app-latestposts></app-latestposts>
+  </div>
+</div>

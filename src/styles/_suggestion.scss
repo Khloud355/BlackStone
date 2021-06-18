@@ -1,0 +1,38 @@
+.sugges-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+.sugges-data{
+    display: flex;
+    align-items: center;
+    .name{
+        .first-name{
+            color: $color-blue;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+        .full-name{
+            color: $color-grey-light;
+            font-size: 1.2rem;
+        }
+        span{
+            display: block;
+        }
+    }
+    .image{
+        width: 4rem;
+        height: 4rem;
+        background-color: $color-white;
+        border-radius: 50%;
+        // background-color: violet;
+
+        margin-right: 1rem;
+        img{
+        
+            padding: .4rem;
+        }
+    }
+}
+
+}

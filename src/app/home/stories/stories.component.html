@@ -1,0 +1,18 @@
+<div class="stories-content">
+  <div class="fixed-story">
+   
+    <span class="pic">
+        <img class="image" src="../../../assets/imgs/images.png" alt="" />
+        <i class="fas fa-plus" style="font-size: 17px; color:#fff"></i>
+    </span>
+
+    <span class="name">You</span>
+  </div>
+
+  <div class="story" *ngFor="let item of stories">
+    <span class="pic" id="{{ item.index }}" (click)="showStory(item.index)">
+      <img [src]="item.url" alt="" />
+    </span>
+    <span class="name">{{ item.name }}</span>
+  </div>
+</div>
